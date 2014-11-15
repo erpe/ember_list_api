@@ -1,7 +1,6 @@
 class NotesController < ApplicationController
-  #skip_before_filter :verify_authenticity_token
   before_action :set_note, only: [:show, :edit, :update, :destroy]
-  protect_from_forgery with: :null_session
+  #protect_from_forgery with: :null_session
   respond_to :json
 
   def index
